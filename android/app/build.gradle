@@ -1,0 +1,50 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace "com.example.nova_post"
+    compileSdk 35
+    ndkVersion flutter.ndkVersion
+
+    defaultConfig {
+        applicationId "com.example.nova_post"
+        minSdkVersion flutter.minSdkVersion          // 🔥 ОБОВʼЯЗКОВО
+        targetSdk 35
+        versionCode flutter.versionCode
+        versionName flutter.versionName
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+subprojects {
+    configurations.all {
+        resolutionStrategy {
+            // Примусово використовуємо сумісну версію з Kotlin 1.8
+            force "com.google.android.gms:play-services-measurement:22.1.2"
+            force "com.google.android.gms:play-services-measurement-api:22.1.2"
+            force "com.google.android.gms:play-services-measurement-impl:22.1.2"
+        }
+    }
+}
+
+flutter {
+    source "../.."
+}
+apply plugin: 'com.google.gms.google-services'

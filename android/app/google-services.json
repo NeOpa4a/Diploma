@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "570710166174",
+    "project_id": "gobox-df0b2",
+    "storage_bucket": "gobox-df0b2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570710166174:android:1cd86720b9e7d7dc37898f",
+        "android_client_info": {
+          "package_name": "com.example.nova_post"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnrCsrKHvpARuYJmhDJ_6vknGhMz5eiuQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
