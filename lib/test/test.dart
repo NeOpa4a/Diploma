@@ -47,6 +47,7 @@ Future<void> createTestData() async {
       number: 10002,
       description: 'Parcel between two real users',
       weight: 3.2,
+      paid: true,
       destination: Location(
         latitude: 50.45 + random.nextDouble() / 10,
         longitude: 30.52 + random.nextDouble() / 10,

@@ -55,7 +55,7 @@ class _PhoneLoginPageState extends State<PhoneLoginPage> {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(
-              e.message ?? 'Auth error',
+              'Please enter a valid phone number',
             ),
             backgroundColor: Colors.red,
           ),

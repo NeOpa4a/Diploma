@@ -9,6 +9,7 @@ class Parcel {
   final Location startLocation;
   final String senderId;
   final String receiverId;
+  final bool paid;
 
   Parcel({
     required this.id,
@@ -19,6 +20,7 @@ class Parcel {
     required this.startLocation,
     required this.senderId,
     required this.receiverId,
+    required this.paid,
   });
 
   Map<String, dynamic> toMap() => {
@@ -29,6 +31,7 @@ class Parcel {
         'startLocation': startLocation.toMap(),
         'senderId': senderId,
         'receiverId': receiverId,
+        'Paid': paid,
       };
 
   factory Parcel.fromMap(Map<String, dynamic> map, String id) {
@@ -41,6 +44,7 @@ class Parcel {
       startLocation: Location.fromMap(map['startLocation']),
       senderId: map['senderId'],
       receiverId: map['receiverId'],
+      paid: map['paid'] ?? false,
     );
   }
 }

@@ -207,6 +207,10 @@ class _ParcelTrackPageState extends State<ParcelTrackPage> {
                             style: TextStyle(color: Colors.white70)),
                         Text('Weight: ${result?.parcel!.weight} kg',
                             style: TextStyle(color: Colors.white70)),
+                        Text(
+                          result?.parcel?.paid == true ? "Paid" : "Not paid",
+                          style: const TextStyle(color: Colors.white70),
+                        ),
                         // Text(
                         //     'From: Lat ${result?.parcel!.startLocation.latitude}, Lng ${result?.parcel!.startLocation.longitude}',
                         //     style: TextStyle(color: Colors.white70)),
